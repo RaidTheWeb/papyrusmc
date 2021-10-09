@@ -28,7 +28,7 @@ jobs:
       - name: Find home directory
         run: pwd
       - name: Fake .minecraft (purely for making sure MCP works)
-        run: wget https://dl.dropboxusercontent.com/s/u59721vo5xvqv34/mcp_minecraft_dir.zip && mkdir /home/runner/.minecraft && cd /home/runner/.minecraft && unzip /home/runner/work/papyrusmc/papyrusmc/mcp_minecraft_dir.zip && cd -
+        run: wget https://dl.dropboxusercontent.com/s/u59721vo5xvqv34/mcp_minecraft_dir.zip && mkdir /home/runner/.minecraft && cd /home/runner/.minecraft && unzip /home/runner/work/papyrusmc/papyrusmc/mcp_minecraft_dir.zip && cd /home/runner/papyrusmc/papyrusmc/mcp
       - name: Decompile Minecraft 1.12
         run: ./decompile.sh && cd ..
       - name: Copy MCP files

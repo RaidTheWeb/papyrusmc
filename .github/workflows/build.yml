@@ -17,7 +17,7 @@ jobs:
       - name: Grab dependencies
         run: sudo apt-get install wine astyle
       - name: Fake .minecraft (purely for making sure MCP works)
-        run: wget https://dl.dropboxusercontent.com/s/u59721vo5xvqv34/mcp_minecraft_dir.zip && mkdir /home/runner/.minecraft && cd /home/runner/.minecraft && unzip /home/runner/work/papyrusmc/papyrusmc/mcp_minecraft_dir.zip && cd /home/runner/work/papyrusmc/papyrusmc/mcp
+        run: wget https://dl.dropboxusercontent.com/s/u59721vo5xvqv34/mcp_minecraft_dir.zip && mkdir /home/runner/.minecraft && cd /home/runner/.minecraft && unzip /home/runner/work/papyrusmc/papyrusmc/mcp_minecraft_dir.zip
       - name: Build with Gradle
         run: chmod +x setup.sh && ./setup.sh
       - name: Upload Artifact

@@ -16,7 +16,7 @@ jobs:
           distribution: 'adopt'
           java-version: 16
       - name: Setup
-        run: chmod +x gradlew && ./gradlew init
+        run: chmod +x gradlew && ./gradlew
       - name: Patch
         run: python3 build.py . patches
       - name: Build with Gradle

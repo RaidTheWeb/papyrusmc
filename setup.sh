@@ -24,7 +24,7 @@ mkdir src/main
 mkdir src/main/java
 mkdir src/main/resources
 cp -r mcp/src/minecraft_server/* src/main/java
-cp -r mcp/jars/assets src/main/resources
+cp -r mcp/temp/src/minecraft_server/assets src/main/resources
 cp -r mcp/temp/src/minecraft_server/log4j2.xml src/main/resources
 
 python3 build.py . patches

@@ -30,7 +30,7 @@ jobs:
       - name: Fake .minecraft (purely for making sure MCP works)
         run: wget https://dl.dropboxusercontent.com/s/u59721vo5xvqv34/mcp_minecraft_dir.zip && mkdir /home/runner/.minecraft && cd /home/runner/.minecraft && unzip /home/runner/work/papyrusmc/papyrusmc/mcp_minecraft_dir.zip && cd /home/runner/work/papyrusmc/papyrusmc/mcp
       - name: Decompile Minecraft 1.12
-        run: ./decompile.sh && cd ..
+        run: cd /home/runner/work/papyrusmc/papyrusmc/mcp && ./decompile.sh && cd ..
       - name: Copy MCP files
         run: mkdir src && mkdir src/main && mkdir src/main/java && mkdir src/main/resources && cp mcp/src/minecraft_server/* src/main/java && cp mcp/temp/minecraft_server/assets src/main/resources && cp mcp/temp/minecraft_server/log4j2.xml src/main/resources
       - name: Setup

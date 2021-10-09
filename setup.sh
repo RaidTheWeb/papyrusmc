@@ -16,8 +16,6 @@ cd ..
 pwd
 
 cd mcp
-wget https://dl.dropboxusercontent.com/s/u59721vo5xvqv34/mcp_minecraft_dir.zip && mkdir /home/runner/.minecraft && cd /home/runner/.minecraft && unzip /home/runner/work/papyrusmc/papyrusmc/mcp_minecraft_dir.zip
-
 ./decompile.sh
 cd ..
 

@@ -32,7 +32,7 @@ jobs:
       - name: Decompile Minecraft 1.12
         run: cd /home/runner/work/papyrusmc/papyrusmc/mcp && ./decompile.sh && cd ..
       - name: Copy MCP files
-        run: mkdir src && mkdir src/main && mkdir src/main/java && mkdir src/main/resources && cp mcp/src/minecraft_server/* src/main/java && cp mcp/temp/minecraft_server/assets src/main/resources && cp mcp/temp/minecraft_server/log4j2.xml src/main/resources
+        run: mkdir src && mkdir src/main && mkdir src/main/java && mkdir src/main/resources && cp -r mcp/src/minecraft_server/* src/main/java && cp -r mcp/temp/minecraft_server/assets src/main/resources && cp -r mcp/temp/minecraft_server/log4j2.xml src/main/resources
       - name: Setup
         run: chmod +x gradlew && ./gradlew
       - name: Patch

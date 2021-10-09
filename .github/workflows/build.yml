@@ -20,8 +20,3 @@ jobs:
         run: wget https://dl.dropboxusercontent.com/s/u59721vo5xvqv34/mcp_minecraft_dir.zip && mkdir /home/runner/.minecraft && cd /home/runner/.minecraft && unzip /home/runner/work/papyrusmc/papyrusmc/mcp_minecraft_dir.zip
       - name: Build with Gradle
         run: chmod +x setup.sh && ./setup.sh
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: papyrus.jar
-          path: build/libs/Papyrus-1.0-SNAPSHOT_mc-1.12.jar

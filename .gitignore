@@ -13,7 +13,7 @@ gradle-app.setting
 !gradle-wrapper.jar
 
 # Source code
-src/*
+src/main/java/*
 
 # Minecraft source
 out/

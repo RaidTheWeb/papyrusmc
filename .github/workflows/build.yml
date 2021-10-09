@@ -15,6 +15,16 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: 16
+      - name: Install dependencies
+        run: sudo apt-get install wine astyle
+      - name: Grab MCP 1.12 zip (9.40)
+        run: wget http://www.modcoderpack.com/files/mcp940.zip
+      - name: Get MCP contents
+        run: mkdir mcp
+      - name: Decompile Minecraft 1.12
+        run: cd mcp && unzip ../mcp940.zip && ./decompile.sh && cd ..
+      - name: Copy MCP files
+        run: mkdir src && mkdir src/main && mkdir src/main/java && mkdir src/main/resources && cp mcp/src/minecraft_server/* src/main/java && cp mcp/temp/minecraft_server/assets src/main/resources && cp mcp/temp/minecraft_server/log4j2.xml src/main/resources
       - name: Setup
         run: chmod +x gradlew && ./gradlew
       - name: Patch

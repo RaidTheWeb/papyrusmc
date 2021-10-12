@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     implementation fileTree('libraries')
+    // https://mvnrepository.com/artifact/org.yaml/snakeyaml
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '1.29'
 }
 
 jar {
